@@ -20,12 +20,12 @@ export class Board {
   }
 
   checkboard() {
-    let tempBoard = [];
+    let tempBoard: number[][] = [];
 
     for (let width = 0; width < this.board.length; width++) {
       tempBoard[width] = [];
       for (let height = 0; height < this.board[width].length; height++) {
-        tempBoard[width].push(this.checkRules(width,height));
+        tempBoard[width].push(this.checkRules(width, height));
       }
     }
     this.board = [...tempBoard];
