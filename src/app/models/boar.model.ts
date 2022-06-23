@@ -12,11 +12,12 @@ export class Board {
   }
 
   status(coordX: number, coordY: number): number {
-    return this.board[coordX][coordY];
+    if (coordX && coordY) return this.board[coordX][coordY];
+    return 0;
   }
 
-  changeStatus(coordX: number, coordY: number): number {
-    return this.board[coordX][coordY] === 0 ? 1 : 0;
+  changeStatus(coordX: number, coordY: number): void {
+    this.board[coordX][coordY] = this.board[coordX][coordY] === 0 ? 1 : 0;
   }
 
   checkboard() {

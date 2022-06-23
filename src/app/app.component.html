@@ -1,7 +1,18 @@
 <div class="board">
   <div class="row" *ngFor="let row of numRows | numToArray">
-    <div class="col" *ngFor="let col of numCols | numToArray">
-      <button></button>
+    <div class="column" *ngFor="let col of numCols | numToArray">
+      <button class="cell"
+        (click)="onClick(row, col)"
+        [ngClass]="{ alive: board.status(row, col) === 1 }"
+      ></button>
     </div>
   </div>
+<div fxLayout="column">
+ <button class="info" (click)="startPause()">Start / Pause</button>
+ <div>Status {{gameStatus}}</div>
+ <div>Generation {{generation}}</div>
+</div>
+
+
+
 </div>
