@@ -16,7 +16,7 @@ export class Board {
     return 0;
   }
 
-  changeStatus(coordX: number, coordY: number): void {
+  changeStatus(coordX: number, coordY: number) {
     this.board[coordX][coordY] = this.board[coordX][coordY] === 0 ? 1 : 0;
   }
 
@@ -66,7 +66,7 @@ export class Board {
       return 1;
     }
 
-    if (currentStatus === 0 && (vecinos === 2 || vecinos === 3)) {
+    if (currentStatus === 0 && vecinos === 3) {
       return 1;
     }
 
