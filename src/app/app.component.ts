@@ -18,22 +18,22 @@ export class AppComponent implements OnInit{
 
 
   constructor(){
-    this.numCols = 20;
-    this.numRows = 20;
+    this.numCols = 50;
+    this.numRows = 50;
     this.generation = 0;
-    this.gameStatus = 0;
+    this.gameStatus = 1;
     this.board = new Board(this.numCols, this.numRows);
 
   }
 
   ngOnInit(): void {
-   setTimeout(()=> {
+   setInterval(()=> {
     if(this.gameStatus === 0){
       this.board.checkboard();
       this.generation++;
     }
 
-   }, 1000)
+   }, 400)
 
   }
 
