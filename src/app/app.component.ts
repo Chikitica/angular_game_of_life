@@ -13,6 +13,8 @@ export class AppComponent implements OnInit{
 
   generation: number;
   gameStatus: number;
+  alive: number;
+  dead: number;
 
   board: Board;
 
@@ -23,6 +25,8 @@ export class AppComponent implements OnInit{
     this.generation = 0;
     this.gameStatus = 1;
     this.board = new Board(this.numCols, this.numRows);
+    this.alive = 0;
+    this.dead = this.numCols * this.numRows;
 
   }
 
@@ -38,11 +42,16 @@ export class AppComponent implements OnInit{
   }
 
   onClick(row: number, col: number){
-    console.log(row, col);
     this.board.changeStatus(row,col);
   }
 
   startPause(){
     this.gameStatus = this.gameStatus === 0 ? 1 : 0;
+  }
+
+  restart(){
+    this.generation = 0;
+    this.gameStatus = 1;
+    this.board.cleanBoard();
   }
 }

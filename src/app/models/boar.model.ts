@@ -32,6 +32,18 @@ export class Board {
     this.board = [...tempBoard];
   }
 
+  cleanBoard() {
+    let tempBoard: number[][] = [];
+
+    for (let width = 0; width < this.board.length; width++) {
+      tempBoard[width] = [];
+      for (let height = 0; height < this.board[width].length; height++) {
+        tempBoard[width].push(0);
+      }
+    }
+    this.board = [...tempBoard];
+  }
+
   checkRules(coordX: number, coordY: number): number {
     const width = this.board.length;
     const height = this.board[0].length;
