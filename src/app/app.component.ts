@@ -20,8 +20,8 @@ export class AppComponent implements OnInit{
 
 
   constructor(){
-    this.numCols = 50;
-    this.numRows = 50;
+    this.numCols = 60;
+    this.numRows = 40;
     this.generation = 0;
     this.gameStatus = 1;
     this.board = new Board(this.numCols, this.numRows);
