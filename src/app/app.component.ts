@@ -13,8 +13,6 @@ export class AppComponent implements OnInit{
 
   generation: number;
   gameStatus: number;
-  alive: number;
-  dead: number;
 
   board: Board;
 
@@ -25,8 +23,6 @@ export class AppComponent implements OnInit{
     this.generation = 0;
     this.gameStatus = 1;
     this.board = new Board(this.numCols, this.numRows);
-    this.alive = 0;
-    this.dead = this.numCols * this.numRows;
 
   }
 
@@ -35,6 +31,7 @@ export class AppComponent implements OnInit{
     if(this.gameStatus === 0){
       this.board.checkboard();
       this.generation++;
+      this.board.checkVitals();
     }
 
    }, 400)

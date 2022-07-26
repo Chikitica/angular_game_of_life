@@ -1,5 +1,7 @@
 export class Board {
   board: number[][];
+  alive: number;
+  total : number;
 
   constructor(pWidth: number, pHeight: number) {
     this.board = [];
@@ -9,6 +11,8 @@ export class Board {
         this.board[width][height] = 0;
       }
     }
+    this.total = pWidth*pHeight;
+    this.alive = 0;
   }
 
   status(coordX: number, coordY: number): number {
@@ -18,6 +22,7 @@ export class Board {
 
   changeStatus(coordX: number, coordY: number) {
     this.board[coordX][coordY] = this.board[coordX][coordY] === 0 ? 1 : 0;
+    this.board[coordX][coordY] === 0 ? this.alive-- : this.alive++
   }
 
   checkboard() {
@@ -32,6 +37,19 @@ export class Board {
     this.board = [...tempBoard];
   }
 
+  checkVitals() {
+    let tempBoard: number[][] = [];
+    this.alive = 0;
+    for (let width = 0; width < this.board.length; width++) {
+      tempBoard[width] = [];
+      for (let height = 0; height < this.board[width].length; height++) {
+        if(this.board[width][height] === 1) {
+          this.alive++;
+        }
+      }
+    }
+  }
+
   cleanBoard() {
     let tempBoard: number[][] = [];
 
@@ -42,6 +60,8 @@ export class Board {
       }
     }
     this.board = [...tempBoard];
+    this.total = this.board.length * this.board.length;
+    this.alive = 0;
   }
 
   checkRules(coordX: number, coordY: number): number {
@@ -81,7 +101,7 @@ export class Board {
     if (currentStatus === 0 && vecinos === 3) {
       return 1;
     }
-
+    
     return 0;
   }
 }
