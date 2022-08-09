@@ -3,21 +3,35 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   background: #eee;
 }
-.container {
-  display: flex;
-  flex-direction: row;
 
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 10px;
+  justify-content: space-around;
+}
+
+.status{
+  font-weight: bold;
+  font-size: medium;
+}
+
+.controls, .status{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .board {
   display: flex;
   flex-direction: row;
+  margin-top: 15px;
 }
 
 .board button.cell {
-  width: 20px;
-  height: 20px;
-
+  width: 15px;
+  height: 15px;
   background-color: white;
   border: 1px solid gray;
 }

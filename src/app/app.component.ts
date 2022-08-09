@@ -18,8 +18,8 @@ export class AppComponent implements OnInit{
 
 
   constructor(){
-    this.numCols = 40;
-    this.numRows = 60;
+    this.numCols = 60;
+    this.numRows = 50;
     this.generation = 0;
     this.gameStatus = 1;
     this.board = new Board(this.numRows, this.numCols);
@@ -32,8 +32,7 @@ export class AppComponent implements OnInit{
       this.generation++;
       this.board.checkVitals();
     }
-
-   }, 400)
+   }, 100)
 
   }
 
