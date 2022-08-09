@@ -1,22 +1,20 @@
-<div class="flex flex-row my-4">
-
-  <div class="flex-col content-evenly mx-2" fxFlex="40">
-    <button class="info" (click)="startPause()">Start / Pause</button>
-    <button class="info" (click)="restart()">Restart</button>
-
-    <div class="flex flex-col mt-5">
-      <div>Status {{gameStatus}}</div>
-      <div>Generation {{generation}}</div>
-      <div>Alive {{board.alive}}</div>
-      <div>Dead {{board.total - board.alive}}</div>
-    </div>
+<div class="container">
+  <div class="status">
+    <div>Status {{gameStatus}}</div>
+    <div>Generation {{generation}}</div>
+    <div>Alive {{board.alive}}</div>
+    <div>Dead {{board.total - board.alive}}</div>
   </div>
 
-  <div fxFlex="60" class="board">
+  <div class="board">
     <div *ngFor="let col of numCols | numToArray">
-      <div class="column -mt-[9px]" *ngFor="let row of numRows | numToArray">
+      <div class="column" *ngFor="let row of numRows | numToArray">
         <button class="cell" (click)="onClick(row, col)" [ngClass]="{ alive: board.status(row, col) === 1 }"></button>
       </div>
     </div>
+  </div>
+  <div class="controls">
+    <button class="info" (click)="startPause()">Start / Pause</button>
+    <button class="info" (click)="restart()">Restart</button>
   </div>
 </div>

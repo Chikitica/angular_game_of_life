@@ -16,8 +16,7 @@ export class Board {
   }
 
   status(coordX: number, coordY: number): number {
-    if (coordX && coordY) return this.board[coordX][coordY];
-    return 0;
+    return this.board[coordX][coordY];
   }
 
   changeStatus(coordX: number, coordY: number) {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Board } from './models/boar.model';
+import { Board } from './models/board.model';
 
 
 @Component({
@@ -18,12 +18,11 @@ export class AppComponent implements OnInit{
 
 
   constructor(){
-    this.numCols = 60;
-    this.numRows = 40;
+    this.numCols = 40;
+    this.numRows = 60;
     this.generation = 0;
     this.gameStatus = 1;
-    this.board = new Board(this.numCols, this.numRows);
-
+    this.board = new Board(this.numRows, this.numCols);
   }
 
   ngOnInit(): void {
