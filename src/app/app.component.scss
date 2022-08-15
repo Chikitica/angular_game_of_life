@@ -14,13 +14,25 @@ body {
 .status{
   font-weight: bold;
   font-size: medium;
+  width: 200px;
 }
 
 .controls, .status{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-content: space-around;
   margin-top: 10px;
+}
+
+li {
+  line-height: 1.8;
+}
+
+.olist {
+  list-style-type: none;
+  list-style-position: inside;
+  margin-bottom: 20px;
 }
 
 .board {
@@ -44,6 +56,7 @@ body {
 
 /* CSS */
 button.info {
+  margin-top: 15px;
   align-items: center;
   background-color: #fee6e3;
   border: 2px solid #111;
@@ -54,11 +67,11 @@ button.info {
   display: flex;
   font-family: Inter, sans-serif;
   font-size: 16px;
-  height: 48px;
+  height: 40px;
   justify-content: center;
   line-height: 24px;
   max-width: 100%;
-  padding: 0 25px;
+  padding: 0 20px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -72,7 +85,7 @@ button.info {
   border-radius: 8px;
   content: "";
   display: block;
-  height: 48px;
+  height: 40px;
   left: 0;
   width: 100%;
   position: absolute;
@@ -100,3 +113,15 @@ button.info {
     padding: 0 40px;
   }
 }
+
+.pixelart-to-css {
+  box-shadow: 40px 20px 0 0 rgba(0, 0, 0, 1), 50px 20px 0 0 rgba(0, 0, 0, 1), 90px 20px 0 0 rgba(0, 0, 0, 1), 130px 20px 0 0 rgba(0, 0, 0, 1), 150px 20px 0 0 rgba(0, 0, 0, 1), 180px 20px 0 0 rgba(0, 0, 0, 1), 190px 20px 0 0 rgba(0, 0, 0, 1), 200px 20px 0 0 rgba(0, 0, 0, 1), 30px 30px 0 0 rgba(0, 0, 0, 1), 80px 30px 0 0 rgba(0, 0, 0, 1), 100px 30px 0 0 rgba(0, 0, 0, 1), 120px 30px 0 0 rgba(0, 0, 0, 1), 140px 30px 0 0 rgba(0, 0, 0, 1), 160px 30px 0 0 rgba(0, 0, 0, 1), 180px 30px 0 0 rgba(0, 0, 0, 1), 190px 30px 0 0 rgba(0, 0, 0, 1), 30px 40px 0 0 rgba(0, 0, 0, 1), 50px 40px 0 0 rgba(0, 0, 0, 1), 60px 40px 0 0 rgba(0, 0, 0, 1), 80px 40px 0 0 rgba(0, 0, 0, 1), 90px 40px 0 0 rgba(0, 0, 0, 1), 100px 40px 0 0 rgba(0, 0, 0, 1), 120px 40px 0 0 rgba(0, 0, 0, 1), 140px 40px 0 0 rgba(0, 0, 0, 1), 160px 40px 0 0 rgba(0, 0, 0, 1), 180px 40px 0 0 rgba(0, 0, 0, 1), 40px 50px 0 0 rgba(0, 0, 0, 1), 50px 50px 0 0 rgba(0, 0, 0, 1), 80px 50px 0 0 rgba(0, 0, 0, 1), 100px 50px 0 0 rgba(0, 0, 0, 1), 120px 50px 0 0 rgba(0, 0, 0, 1), 160px 50px 0 0 rgba(0, 0, 0, 1), 180px 50px 0 0 rgba(0, 0, 0, 1), 190px 50px 0 0 rgba(0, 0, 0, 1), 200px 50px 0 0 rgba(0, 0, 0, 1), 90px 80px 0 0 rgba(0, 0, 0, 1), 120px 80px 0 0 rgba(0, 0, 0, 1), 130px 80px 0 0 rgba(0, 0, 0, 1), 140px 80px 0 0 rgba(0, 0, 0, 1), 80px 90px 0 0 rgba(0, 0, 0, 1), 100px 90px 0 0 rgba(0, 0, 0, 1), 120px 90px 0 0 rgba(0, 0, 0, 1), 130px 90px 0 0 rgba(0, 0, 0, 1), 80px 100px 0 0 rgba(0, 0, 0, 1), 100px 100px 0 0 rgba(0, 0, 0, 1), 120px 100px 0 0 rgba(0, 0, 0, 1), 90px 110px 0 0 rgba(0, 0, 0, 1), 120px 110px 0 0 rgba(0, 0, 0, 1), 30px 130px 0 0 rgba(0, 0, 0, 1), 70px 130px 0 0 rgba(0, 0, 0, 1), 90px 130px 0 0 rgba(0, 0, 0, 1), 100px 130px 0 0 rgba(0, 0, 0, 1), 110px 130px 0 0 rgba(0, 0, 0, 1), 130px 130px 0 0 rgba(0, 0, 0, 1), 140px 130px 0 0 rgba(0, 0, 0, 1), 150px 130px 0 0 rgba(0, 0, 0, 1), 180px 130px 0 0 rgba(255, 0, 0, 1), 200px 130px 0 0 rgba(255, 0, 0, 1), 30px 140px 0 0 rgba(0, 0, 0, 1), 70px 140px 0 0 rgba(0, 0, 0, 1), 90px 140px 0 0 rgba(0, 0, 0, 1), 100px 140px 0 0 rgba(0, 0, 0, 1), 130px 140px 0 0 rgba(0, 0, 0, 1), 140px 140px 0 0 rgba(0, 0, 0, 1), 170px 140px 0 0 rgba(255, 0, 0, 1), 180px 140px 0 0 rgba(255, 0, 0, 1), 190px 140px 0 0 rgba(255, 0, 0, 1), 200px 140px 0 0 rgba(255, 0, 0, 1), 210px 140px 0 0 rgba(255, 0, 0, 1), 30px 150px 0 0 rgba(0, 0, 0, 1), 70px 150px 0 0 rgba(0, 0, 0, 1), 90px 150px 0 0 rgba(0, 0, 0, 1), 130px 150px 0 0 rgba(0, 0, 0, 1), 180px 150px 0 0 rgba(255, 0, 0, 1), 190px 150px 0 0 rgba(255, 0, 0, 1), 200px 150px 0 0 rgba(255, 0, 0, 1), 30px 160px 0 0 rgba(0, 0, 0, 1), 40px 160px 0 0 rgba(0, 0, 0, 1), 50px 160px 0 0 rgba(0, 0, 0, 1), 70px 160px 0 0 rgba(0, 0, 0, 1), 90px 160px 0 0 rgba(0, 0, 0, 1), 130px 160px 0 0 rgba(0, 0, 0, 1), 140px 160px 0 0 rgba(0, 0, 0, 1), 150px 160px 0 0 rgba(0, 0, 0, 1), 190px 160px 0 0 rgba(255, 0, 0, 1);
+  height: 8px;
+  width: 8px;
+  margin-top: 5px;
+}
+
+.banner{
+  height: 200px;
+}
+

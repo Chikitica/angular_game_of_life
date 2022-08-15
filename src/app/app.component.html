@@ -1,9 +1,20 @@
 <div class="container">
   <div class="status">
-    <div>Status {{gameStatus}}</div>
-    <div>Generation {{generation}}</div>
-    <div>Alive {{board.alive}}</div>
-    <div>Dead {{board.total - board.alive}}</div>
+    <div class="banner">
+      <div class="pixelart-to-css"></div>
+    </div>
+    <ul class="olist">
+      <li>Status: {{gameStatus}}</li>
+      <li>Generation: {{generation}}</li>
+      <li>Alive: {{board.alive}}</li>
+      <li>Dead: {{board.total - board.alive}}</li>
+    </ul>
+    <h2>Rules</h2>
+    <ol>
+      <li>Any live cell with two or three live neighbours survives.</li>
+      <li> Any dead cell with three live neighbours becomes a live cell.</li>
+      <li> All other live cells die in the next generation. Similarly, all other dead cells stay dead.</li>
+    </ol>
   </div>
 
   <div class="board">
